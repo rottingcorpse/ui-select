@@ -670,6 +670,11 @@ uis.controller('uiSelectCtrl',
     if(KEY.isVerticalMovement(key) && ctrl.items.length > 0){
       _ensureHighlightVisible();
     }
+    
+    if (key === KEY.ENTER || key === KEY.ESC) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
 
   });
 
